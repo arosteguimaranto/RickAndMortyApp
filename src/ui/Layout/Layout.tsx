@@ -1,9 +1,11 @@
 import React from 'react'
+import TopBar from '../TopBar/TopBar'
+import { ReactNode } from 'react'
 
-const Layout = ({ children }) => {
+const Layout:React.FC<{ children: ReactNode }> = ({ children })  => {
 	return (
 		<div>
-			{/*topbar */}
+			<TopBar/>
       {children}
 
 		</div>

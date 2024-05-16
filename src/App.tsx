@@ -7,6 +7,7 @@ import { Favorites } from "./components/Favorites";
 import { Login } from "./components/Login";
 import { AuthProvider } from "./context/authContext";
 import { RickAndMortyProvider } from "./context/charactersContext";
+import Layout from "./ui/Layout/Layout";
 
 function App() {
 	return (
