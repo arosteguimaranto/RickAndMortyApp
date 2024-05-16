@@ -4,11 +4,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Characters from "./components/Home";
 import { Locations } from "./components/Locations";
 import { Favorites } from "./components/Favorites";
-import { Login } from "./components/Login";
 import { AuthProvider } from "./context/authContext";
 import { RickAndMortyProvider } from "./context/charactersContext";
 import Layout from "./ui/Layout/Layout";
 import { LogProvider, LogContext } from './context/logContext';
+import Form from "./ui/Form/Form";
 
 function App() {
 	return (
@@ -22,7 +22,7 @@ function App() {
 						<Route path="/" Component={Characters} />
 						<Route path="/locations" Component={Locations} />
 						<Route path="/favorites" Component={Favorites} />
-						<Route path="/login" Component={Login} />
+						<Route path="/form" Component={Form}  />
 					</Routes>
 
 

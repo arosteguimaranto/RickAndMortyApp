@@ -18,7 +18,7 @@ const TopBar = () => {
           <NavLink to="/favorites">Favoritos</NavLink>
         </li>
 				<li>
-          <NavLink to="/login">Iniciar Sesion</NavLink>
+          <NavLink to="/form">Iniciar Sesion</NavLink>
         </li>
 			</ul>
 		</nav>

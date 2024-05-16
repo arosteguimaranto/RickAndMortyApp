@@ -1,14 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export const Login = () => {
-	const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-	const [error, setError] = useState('');
-
-
-  return (
-    <div>
-
+const Login = () => {
+	return (
+		<div>
+			Login
 		</div>
-  )
+	)
 }
+
+export default Login
