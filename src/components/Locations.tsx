@@ -2,6 +2,8 @@ import React from 'react'
 
 export const Locations = () => {
   return (
-    <div>Locations</div>
+    <div>
+			<h1>Locations</h1>
+		</div>
   )
 }

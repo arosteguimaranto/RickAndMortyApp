@@ -1,4 +1,5 @@
 import React from 'react'
+import "./styles.css"
 
 
 const Button = () => {
@@ -6,7 +7,7 @@ const Button = () => {
 
 	return (
 		<div>
-			<button> Cargar mas personajes </button>
+			<button className='button'> Cargar mas personajes </button>
 		</div>
 	)
 }

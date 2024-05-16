@@ -2,6 +2,8 @@ import React from 'react'
 
 export const Favorites = () => {
   return (
-    <div>Favorites</div>
+    <div>
+			<h1>Favorites</h1>
+		</div>
   )
 }
