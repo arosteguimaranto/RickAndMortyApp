@@ -1,27 +1,29 @@
-import { useState, useEffect } from 'react';
-import axios from "axios";
-import { Character } from '../types/characters';
-import { getCharacters } from '../api/rickAndMortyApi';
-
-
+import { useState, useEffect } from "react";
+import { Character, Pagination } from "../types/characters";
+import { getCharacters } from "../api/rickAndMortyApi";
 
 const useCharacters = () => {
   const [characters, setCharacters] = useState<Character[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-
+  const [error, setError] = useState<boolean>(false);
+  const [pagination, setPagination] = useState<Pagination>({ count: 0, next: null, pages: 0, prev: null });
 
   useEffect(() => {
-    fetchCharacters()
-
+    fetchCharacters();
   }, []);
 
   const fetchCharacters = async () => {
-    const characters = await getCharacters();
-    setCharacters(characters);
-    setLoading(false);
+    try {
+      const response = await getCharacters();
+      setCharacters(response.results);
+      setPagination(response.info)
+      setLoading(false);
+    } catch (error) {
+      setError(true);
+    }
   };
 
-  return { characters, loading };
+  return { characters, loading, error, pagination };
 };
 
 export default useCharacters;

@@ -1,12 +1,14 @@
 
 import React, { createContext, ReactNode, useContext, } from 'react';
 import useCharacters from '../hooks/useCharacters';
-import { Character } from '../types/characters';
+import { Character, Pagination } from '../types/characters';
 
 
 interface RickAndMortyContextType {
   characters: Character[];
   loading: boolean;
+  pagination: Pagination,
+  error: boolean
 }
 
 const RickAndMortyContext = createContext<RickAndMortyContextType | undefined>(undefined);
@@ -20,10 +22,10 @@ export const useRickAndMortyContext = () => {
 };
 
 export const RickAndMortyProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const { characters, loading } = useCharacters();
+  const { characters, loading, pagination, error } = useCharacters();
 
   return (
-    <RickAndMortyContext.Provider value={{ characters, loading }}>
+    <RickAndMortyContext.Provider value={{ characters, loading, pagination, error }}>
       {children}
     </RickAndMortyContext.Provider>
   );
