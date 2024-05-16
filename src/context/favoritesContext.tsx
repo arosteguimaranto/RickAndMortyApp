@@ -1,12 +1,12 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-// Definir el tipo para un elemento favorito
+
 interface Favorite {
   id: number;
   
 }
 
-// Definir el tipo para el contexto
+
 interface FavoritesContextType {
   favorites: Favorite[];
   addFavorite: (favorite: Favorite) => void;
