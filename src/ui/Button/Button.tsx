@@ -1,11 +1,14 @@
 import React from 'react'
 
+
 const Button = () => {
+
+
 	return (
 		<div>
-			<button> Mas </button>
+			<button> Cargar mas personajes </button>
 		</div>
 	)
 }
 
-export default Button
+export default Button;

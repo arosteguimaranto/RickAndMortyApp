@@ -8,11 +8,13 @@ import { Login } from "./components/Login";
 import { AuthProvider } from "./context/authContext";
 import { RickAndMortyProvider } from "./context/charactersContext";
 import Layout from "./ui/Layout/Layout";
+import { LogProvider, LogContext } from './context/logContext';
 
 function App() {
 	return (
 		<BrowserRouter>
 		<Layout>
+			<LogProvider>
 			<RickAndMortyProvider>
 				<AuthProvider>
 
@@ -26,6 +28,8 @@ function App() {
 
 				</AuthProvider>
 			</RickAndMortyProvider>
+			</LogProvider>
+
 			</Layout>
 		</BrowserRouter>
 	);

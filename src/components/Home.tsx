@@ -7,6 +7,8 @@ const Home = () => {
 	const { loading, characters, error, pagination } = useRickAndMortyContext();
 	const { favorites, toggleFavorite } = useFavorites();
 
+
+
 	if (loading)
 		return (
 			<div className="loading">

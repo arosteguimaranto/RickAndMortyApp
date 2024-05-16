@@ -16,7 +16,7 @@ const RickAndMortyContext = createContext<RickAndMortyContextType | undefined>(u
 export const useRickAndMortyContext = () => {
   const context = useContext(RickAndMortyContext);
   if (!context) {
-    throw new Error('useRickAndMorty debe ser usado dentro de un RickAndMortyProvider');
+    throw new Error('useRickAndMortyContext debe ser usado dentro de un RickAndMortyProvider');
   }
   return context;
 };
