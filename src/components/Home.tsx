@@ -1,5 +1,6 @@
 import { useRickAndMortyContext } from "../context/charactersContext";
 import useFavorites from "../hooks/useFavorites";
+import Button from "../ui/Button/Button";
 import { CharacterCard } from "../ui/Card/Card";
 
 const Home = () => {
@@ -35,6 +36,7 @@ const Home = () => {
 					/>
 				))}
 			</div>
+			<Button/>
 		</div>
 	);
 };

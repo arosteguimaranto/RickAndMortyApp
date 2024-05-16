@@ -6,9 +6,9 @@ import { NavLink } from 'react-router-dom';
 
 const TopBar = () => {
 	return (
-		<nav>
-			<ul>
-				<li>
+		<nav className='navbar'>
+			<ul className='ul'>
+				<li className='li'>
           <NavLink to="/">Home</NavLink>
         </li>
         <li>

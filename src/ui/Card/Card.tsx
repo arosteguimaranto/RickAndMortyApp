@@ -1,6 +1,7 @@
 import React from 'react'
 import { Character } from '../../types/characters'
 import './style.css'
+import Button from '../Button/Button';
 
 interface CharacterCardProps { character: Character, isFavorite: boolean, onToggleFavorite: () => void }
 

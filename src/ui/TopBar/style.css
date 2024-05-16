@@ -4,8 +4,20 @@
   overflow: hidden;
 }
 
-.navbar a {
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.navbar ul li {
   float: left;
+
+}
+
+.navbar ul li a {
   display: block;
   color: white;
   text-align: center;
@@ -13,11 +25,13 @@
   text-decoration: none;
 }
 
-.navbar a:hover {
+
+.navbar ul li a:hover {
   background-color: #ddd;
   color: black;
-
 }
-.navbar .active {
+
+
+.navbar ul li a.active {
   background-color: #666;
 }
