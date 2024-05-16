@@ -3,7 +3,6 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface Favorite {
   id: number;
-  
 }
 
 
