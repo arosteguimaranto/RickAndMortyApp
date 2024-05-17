@@ -8,7 +8,8 @@ interface RickAndMortyContextType {
   characters: Character[];
   loading: boolean;
   pagination: Pagination,
-  error: boolean
+  error: boolean,
+	goToNextPage: () => void,
 }
 
 const RickAndMortyContext = createContext<RickAndMortyContextType | undefined>(undefined);
@@ -22,10 +23,10 @@ export const useRickAndMortyContext = () => {
 };
 
 export const RickAndMortyProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const { characters, loading, pagination, error } = useCharacters();
+  const { characters, loading, pagination, error, goToNextPage } = useCharacters();
 
   return (
-    <RickAndMortyContext.Provider value={{ characters, loading, pagination, error }}>
+    <RickAndMortyContext.Provider value={{ characters, loading, pagination, error, goToNextPage }}>
       {children}
     </RickAndMortyContext.Provider>
   );

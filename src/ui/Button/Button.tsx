@@ -1,17 +1,18 @@
-import React from 'react'
-import "./styles.css"
+import React from "react";
+import "./styles.css";
 
-
-const Button = () => {
-
-
-	return (
-		<div className='characters-div'>
-			<button className='button-characters'>Página anterior</button>
-			<button className='button-characters'>Página siguiente</button>
-
-		</div>
-	)
+interface ButtonProps {
+	onClick: () => void;
 }
+
+const Button: React.FC<ButtonProps> = ({ onClick }) => {
+	return (
+		<div className="characters-div">
+			<button className="button-characters" onClick={onClick}>
+				Cargar mas
+			</button>
+		</div>
+	);
+};
 
 export default Button;

@@ -4,10 +4,8 @@ import Button from "../ui/Button/Button";
 import { CharacterCard } from "../ui/Card/Card";
 
 const Home = () => {
-	const { loading, characters, error, pagination } = useRickAndMortyContext();
+	const { loading, characters, error, goToNextPage } = useRickAndMortyContext();
 	const { favorites, toggleFavorite } = useFavorites();
-
-
 
 	if (loading)
 		return (
@@ -38,8 +36,9 @@ const Home = () => {
 					/>
 				))}
 			</div>
-			<Button/>
+			<Button onClick={goToNextPage} />
 		</div>
+
 	);
 };
 
