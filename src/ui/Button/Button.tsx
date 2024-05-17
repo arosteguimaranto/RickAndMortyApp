@@ -7,7 +7,9 @@ const Button = () => {
 
 	return (
 		<div className='characters-div'>
-			<button className='button-characters'> Cargar mas personajes </button>
+			<button className='button-characters'>Página anterior</button>
+			<button className='button-characters'>Página siguiente</button>
+
 		</div>
 	)
 }
