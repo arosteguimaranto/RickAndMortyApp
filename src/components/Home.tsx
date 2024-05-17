@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+import { useAuthContext } from "../context/authContext";
 import { useRickAndMortyContext } from "../context/charactersContext";
 import useFavorites from "../hooks/useFavoritesCharacters";
 import Button from "../ui/Button/Button";
@@ -5,7 +7,15 @@ import { CharacterCard } from "../ui/Card/CharacterCard";
 
 const Home = () => {
 	const { loading, characters, error, goToNextPage } = useRickAndMortyContext();
+	const { user } = useAuthContext()
 	const { favorites, toggleFavorite } = useFavorites();
+	const navigate = useNavigate()
+
+	const isAuthenticated = !!user
+
+	const redirectToLogin = () => {
+		navigate('/login')
+	}
 
 	if (loading)
 		return (
@@ -33,10 +43,12 @@ const Home = () => {
 							(favorite) => favorite.id === character.id
 						)}
 						onToggleFavorite={() => toggleFavorite(character)}
+						isVisible={isAuthenticated}
+						redirect={redirectToLogin}
 					/>
 				))}
 			</div>
-			<Button onClick={goToNextPage} />
+			<Button onClick={goToNextPage}>Cargar mas</Button>
 		</div>
 
 	);

@@ -1,10 +1,14 @@
 import React from 'react'
 import './style.css'
 import { NavLink } from 'react-router-dom';
-
-
+import { useAuthContext } from '../../context/authContext';
+import Button from '../Button/Button';
 
 const TopBar = () => {
+	const { user, logOut } = useAuthContext()
+
+	const isAuthenticated = !!user
+
 	return (
 		<div className='nav'>
 			<h2 className='nav-h2'>Rick&Morty</h2>
@@ -20,7 +24,10 @@ const TopBar = () => {
           <NavLink to="/favorites">Favoritos</NavLink>
         </li>
 				<li>
-          <NavLink to="/form">Iniciar Sesion</NavLink>
+					{isAuthenticated ? <Button type="topbar" onClick={logOut}>Cerrar sesion</Button> : (
+						<NavLink to="/login">Iniciar Sesion</NavLink>
+					)}
+
         </li>
 			</ul>
 		</nav>

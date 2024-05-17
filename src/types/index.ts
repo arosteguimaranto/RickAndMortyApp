@@ -21,3 +21,9 @@ export interface Location {
 	dimension: string;
 	url: string
 }
+
+export interface User{
+	password: string;
+	email: string;
+}
+

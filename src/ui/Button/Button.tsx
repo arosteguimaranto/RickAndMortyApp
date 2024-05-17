@@ -3,13 +3,18 @@ import "./styles.css";
 
 interface ButtonProps {
 	onClick: () => void;
+	children: React.ReactNode;
+	type?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ onClick }) => {
+const Button: React.FC<ButtonProps> = ({ onClick, children, type = "btn" }) => {
 	return (
 		<div className="characters-div">
-			<button className="button-characters" onClick={onClick}>
-				Cargar mas
+			<button
+				className={type == "btn" ? "button-characters" : "topbar"}
+				onClick={onClick}
+			>
+				{children}
 			</button>
 		</div>
 	);
