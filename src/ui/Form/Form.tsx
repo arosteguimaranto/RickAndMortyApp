@@ -45,8 +45,6 @@ const Form = () => {
 						name="password"
 						placeholder="Introduce tu contraseña"
 					/>
-					<label htmlFor="remember_me">Recordarme</label>
-					<input type="checkbox" id="remember_me" name="remember_me" />
 					<button className="button-form" type="submit">
 						Iniciar sesión
 					</button>
