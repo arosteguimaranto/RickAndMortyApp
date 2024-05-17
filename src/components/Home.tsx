@@ -25,7 +25,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<h1>Personajes de Rick and Morty</h1>
+			<h1 className="character-title">Personajes de Rick and Morty</h1>
 			<div className="character-list">
 				{characters.map((character) => (
 					<CharacterCard

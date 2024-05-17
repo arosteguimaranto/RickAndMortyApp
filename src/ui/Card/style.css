@@ -1,10 +1,15 @@
+.character-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+}
 
 .character-card {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 20px;
     margin: 10px;
-    width: 200px;
+    width: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
@@ -20,3 +25,25 @@
     width: 100%;
     border-radius: 8px;
   }
+
+.button-fav {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+}
+
+.button-fav:hover {
+  background-color: #0056b3;
+}
+
+
+.button-fav:active {
+  background-color: #003366;
+}
+

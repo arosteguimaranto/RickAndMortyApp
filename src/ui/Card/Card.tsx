@@ -15,7 +15,7 @@ export const CharacterCard: React.FC<CharacterCardProps> = ({ character, isFavor
 		<div className="character-card">
 			<h2 className="character-name">{character.name}</h2>
 			<img className="character-image" src={character.image} alt={character.name} />
-			<button onClick={handleToggleFavorite}>{isFavorite ? 'Quitar de Favoritos' : 'Agregar a Favoritos'}</button>
+			<button className='button-fav' onClick={handleToggleFavorite}>{isFavorite ? 'Quitar de Favoritos' : 'Agregar a Favoritos'}</button>
 		</div>
 	)
 };

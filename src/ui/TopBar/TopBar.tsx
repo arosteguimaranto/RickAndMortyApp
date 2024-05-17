@@ -6,7 +6,9 @@ import { NavLink } from 'react-router-dom';
 
 const TopBar = () => {
 	return (
-		<nav className='navbar'>
+		<div className='nav'>
+			<h2 className='nav-h2'>Rick&Morty</h2>
+					<nav className='navbar'>
 			<ul className='ul'>
 				<li className='li'>
           <NavLink to="/">Home</NavLink>
@@ -22,6 +24,8 @@ const TopBar = () => {
         </li>
 			</ul>
 		</nav>
+		</div>
+
 	)
 }
 
