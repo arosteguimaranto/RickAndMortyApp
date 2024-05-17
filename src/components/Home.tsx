@@ -48,7 +48,9 @@ const Home = () => {
 					/>
 				))}
 			</div>
-			<Button onClick={goToNextPage}>Cargar mas</Button>
+				<div className="div-button-more">
+				<Button onClick={goToNextPage}>Cargar mas</Button>
+				</div>
 		</div>
 
 	);

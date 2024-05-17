@@ -24,11 +24,11 @@ export const LocationCard: React.FC<LocationCardProps> = ({
 
 	return (
 		<div className="card location">
-			<h2 className="card-name">Nombre: {location.name}</h2>
+			<h2 className="card-name"> {location.name}</h2>
 			<p className="card-p">Tipo: {location.type}</p>
-			<p className="card-p">Dimension: {location.dimension}</p>
+			<p className="card-p1">Dimension: <br/>{location.dimension}</p>
 			{isVisible ? (
-				<div>
+				<div className="div-button">
 					<button className="button-fav" onClick={handleToggleFavorite}>
 						{isFavorite ? "Quitar de Favoritos" : "Agregar a Favoritos"}
 					</button>

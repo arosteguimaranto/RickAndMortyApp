@@ -28,15 +28,17 @@ export const CharacterCard: React.FC<CharacterCardProps> = ({
 			<p className="card-p">{character.species}</p>
 			<p className="card-p">{character.status}</p>
 			{isVisible ? (
-				<div>
+				<div className="div-button">
 					<button className="button-fav" onClick={handleToggleFavorite}>
 						{isFavorite ? "Quitar de Favoritos" : "Agregar a Favoritos"}
 					</button>
 				</div>
 			) : (
-				<button className="button-fav" onClick={redirect}>
+			<div className="div-button">
+					<button className="button-fav" onClick={redirect}>
 					Inicia sesión para agregar a favoritos
 				</button>
+			</div>
 			)}
 		</div>
 	);

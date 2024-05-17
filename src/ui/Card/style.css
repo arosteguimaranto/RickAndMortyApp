@@ -12,12 +12,13 @@
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
-		background-color: #003366;
-		color: #ccc
+		background-color: #103c68d5;
+		color: #23ff36fb
 	}
 
 
   .card-name {
+		text-align: center;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 12px;
@@ -29,14 +30,26 @@
     border-radius: 8px;
   }
 	.card-p{
+		color: #161313fb;
 		text-align: center;
 		font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
 	}
-
+	.card-p1{
+		color: rgb(156, 252, 30);
+		text-align: center;
+		font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+	}
+.div-button{
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+}
 .button-fav {
-margin-left: 15%;
+
   padding: 10px 20px;
   font-size: 13px;
   font-weight: bold;

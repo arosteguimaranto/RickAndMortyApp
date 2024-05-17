@@ -15,12 +15,12 @@ export const FavoriteCard: React.FC<FavoriteCardProps> = ({
 
 	return (
 		<div className="card favorite">
-			<h2 className="card-name">Nombre: {item.name}</h2>
+			<h2 className="card-name"> {item.name}</h2>
 			{isCharacter(item) ? (
 				<>
 					<img className="card-image" src={item.image} alt={item.name} />
 					<p className="card-p">Especie: {item.species}</p>
-					<p className="card-p">Género: {item.status}</p>
+					<p className="card-p">Estado: {item.status}</p>
 				</>
 			) : (
 				<>
@@ -28,9 +28,12 @@ export const FavoriteCard: React.FC<FavoriteCardProps> = ({
 					<p className="card-p">Dimensión: {item.dimension}</p>
 				</>
 			)}
+			<div className="div-button">
 			<button className="button-fav" onClick={onRemoveFavorite}>
 				Quitar de Favoritos
 			</button>
+			</div>
+
 		</div>
 	);
 };
