@@ -6,8 +6,8 @@ const Button = () => {
 
 
 	return (
-		<div>
-			<button className='button'> Cargar mas personajes </button>
+		<div className='characters-div'>
+			<button className='button-characters'> Cargar mas personajes </button>
 		</div>
 	)
 }
