@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Character } from '../types';
 
-const useFavorites = () => {
+const useFavoritesCharacters = () => {
   const [favorites, setFavorites] = useState<Character[]>(() => {
-    const storedFavorites = localStorage.getItem('favorites');
+    const storedFavorites = localStorage.getItem('favorites-characters');
     return storedFavorites ? JSON.parse(storedFavorites) : [];
   });
 
@@ -19,10 +19,10 @@ const useFavorites = () => {
   };
 
   useEffect(() => {
-    localStorage.setItem('favorites', JSON.stringify(favorites));
+    localStorage.setItem('favorites-characters', JSON.stringify(favorites));
   }, [favorites]);
 
   return { favorites, toggleFavorite };
 };
 
-export default useFavorites;
+export default useFavoritesCharacters;

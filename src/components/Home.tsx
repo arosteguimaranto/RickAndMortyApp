@@ -1,5 +1,5 @@
 import { useRickAndMortyContext } from "../context/charactersContext";
-import useFavorites from "../hooks/useFavorites";
+import useFavorites from "../hooks/useFavoritesCharacters";
 import Button from "../ui/Button/Button";
 import { CharacterCard } from "../ui/Card/CharacterCard";
 

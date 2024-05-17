@@ -1,14 +1,12 @@
-import React from 'react'
-import { useRickAndMortyContext } from '../context/charactersContext';
-import useFavorites from '../hooks/useFavorites';
-import Button from '../ui/Button/Button';
 import { LocationCard } from '../ui/Card/LocationCard';
 import { useLocationContext } from '../context/locationContext';
+import useFavoritesLocations from '../hooks/useFavoritesLocations';
+import Button from '../ui/Button/Button';
 
 export const Locations = () => {
 
-	const { loading, locations, error } = useLocationContext();
-	const { favorites, toggleFavorite } = useFavorites();
+	const { loading, locations, error, goToNextPage } = useLocationContext();
+	const { favorites, toggleFavorite } = useFavoritesLocations();
 
 	if (loading)
 		return (
@@ -33,14 +31,14 @@ export const Locations = () => {
 					<LocationCard
 						key={location.id}
 						location={location}
-						// isFavorite={favorites.some(
-						// 	(favorite) => favorite.id === character.id
-						// )}
-						// onToggleFavorite={() => toggleFavorite(character)}
+						 isFavorite={favorites.some(
+					 	(favorite) => favorite.id === location.id
+						 )}
+						 onToggleFavorite={() => toggleFavorite(location)}
 					/>
 				))}
 			</div>
-			{/* <Button onClick={goToNextPage} /> */}
+			 <Button onClick={goToNextPage} />
 		</div>
   )
 }
