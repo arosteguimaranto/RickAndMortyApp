@@ -9,8 +9,11 @@ const useCharacters = () => {
   const [pagination, setPagination] = useState<Pagination>({ count: 0, next: null, pages: 0, prev: null });
 	const [currentPageUrl, setCurrentPageUrl] = useState<string>(`${API_URL}/character`);
 
+
+
   useEffect(() => {
     fetchCharacters(currentPageUrl);
+	// eslint-disable-next-line
   }, [currentPageUrl]);
 
   const fetchCharacters = async (url: string) => {

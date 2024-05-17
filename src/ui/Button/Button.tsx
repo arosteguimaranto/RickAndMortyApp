@@ -11,7 +11,7 @@ const Button: React.FC<ButtonProps> = ({ onClick, children, type = "btn" }) => {
 	return (
 		<div className="characters-div">
 			<button
-				className={type == "btn" ? "button-characters" : "topbar"}
+				className={type === "btn" ? "button-characters" : "topbar"}
 				onClick={onClick}
 			>
 				{children}

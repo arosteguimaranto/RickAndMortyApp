@@ -11,6 +11,7 @@ const useLocations = () => {
 
 	useEffect(() => {
     fetchLocations(currentPageUrl);
+			// eslint-disable-next-line
   }, [currentPageUrl]);
 
 	const fetchLocations = async (url: string) => {
