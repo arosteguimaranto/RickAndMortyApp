@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Character } from '../types/characters';
+import { Character } from '../types';
 
 const useFavorites = () => {
   const [favorites, setFavorites] = useState<Character[]>(() => {

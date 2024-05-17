@@ -1,7 +1,7 @@
 
 import React, { createContext, ReactNode, useContext, } from 'react';
 import useCharacters from '../hooks/useCharacters';
-import { Character, Pagination } from '../types/characters';
+import { Character, Pagination } from '../types';
 
 
 interface RickAndMortyContextType {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Character, Pagination } from "../types/characters";
+import { Character, Pagination } from "../types";
 import { API_URL, getCharacters } from "../api/rickAndMortyApi";
 
 const useCharacters = () => {
@@ -25,18 +25,13 @@ const useCharacters = () => {
       setLoading(false);
     } catch (error) {
       setError(true);
+			setLoading(false);
     }
   };
 
-	console.log(characters.length)
-
 	const goToNextPage = () => {
-		console.log('curresnt',currentPageUrl)
     setCurrentPageUrl(pagination.next || '');
   };
-
-
-	console.log('curr carac', characters)
 
   return { characters, loading, error, pagination, goToNextPage };
 };

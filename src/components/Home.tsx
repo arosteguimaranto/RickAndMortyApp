@@ -1,7 +1,7 @@
 import { useRickAndMortyContext } from "../context/charactersContext";
 import useFavorites from "../hooks/useFavorites";
 import Button from "../ui/Button/Button";
-import { CharacterCard } from "../ui/Card/Card";
+import { CharacterCard } from "../ui/Card/CharacterCard";
 
 const Home = () => {
 	const { loading, characters, error, goToNextPage } = useRickAndMortyContext();
@@ -23,8 +23,8 @@ const Home = () => {
 
 	return (
 		<div>
-			<h1 className="character-title">Personajes de Rick and Morty</h1>
-			<div className="character-list">
+			<h1 className="title">Personajes de Rick and Morty</h1>
+			<div className="list">
 				{characters.map((character) => (
 					<CharacterCard
 						key={character.id}
