@@ -5,6 +5,7 @@ export interface Character {
 	species: string;
 	image: string;
 	location: Location
+	uniqueKey?: string | undefined;
 }
 
 export interface Pagination {
@@ -20,10 +21,12 @@ export interface Location {
 	type: string;
 	dimension: string;
 	url: string
+	uniqueKey?: string | undefined;
 }
 
 export interface User{
 	password: string;
 	email: string;
 }
+
 
